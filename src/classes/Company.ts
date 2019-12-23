@@ -1,8 +1,9 @@
 import { prop, getModelForClass } from '@typegoose/typegoose';
+import { enums } from '@postilion/utils';
 
-import { exchanges, supportedRegulators } from '../utils/common-enums';
+const { exchanges, supportedRegulators } = enums;
 
-class CompanyClass {
+export default class CompanyClass {
     @prop({ required: true })
     public name: string;
     @prop({ required: true })

@@ -25,7 +25,7 @@ class Link {
     order: number;
     weight: number;
     type: string;
-});
+};
 
 const LinkModel = getModelForClass(Link);
 
