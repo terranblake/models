@@ -9,7 +9,8 @@ exports.__esModule = true;
 var typegoose_1 = require("@typegoose/typegoose");
 var Company_1 = require("./Company");
 var Filing_1 = require("./Filing");
-var enums_1 = require("@pontilion/enums");
+var utils_1 = require("@postilion/utils");
+var filingDocumentTypes = utils_1.enums.filingDocumentTypes;
 var FilingDocument = /** @class */ (function () {
     function FilingDocument() {
     }
@@ -20,7 +21,7 @@ var FilingDocument = /** @class */ (function () {
         typegoose_1.prop({ ref: Company_1["class"], required: true })
     ], FilingDocument.prototype, "company");
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.filingDocumentTypes, required: true })
+        typegoose_1.prop({ "enum": filingDocumentTypes, required: true })
     ], FilingDocument.prototype, "type");
     __decorate([
         typegoose_1.prop()
@@ -52,5 +53,6 @@ var FilingDocument = /** @class */ (function () {
     return FilingDocument;
 }());
 exports["class"] = FilingDocument;
+exports["default"] = FilingDocument;
 var FilingDocumentModel = typegoose_1.getModelForClass(FilingDocument);
 exports.model = FilingDocumentModel;

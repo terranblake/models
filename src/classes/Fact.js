@@ -52,5 +52,6 @@ var Fact = /** @class */ (function () {
     return Fact;
 }());
 exports["class"] = Fact;
+exports["default"] = Fact;
 var FactModel = typegoose_1.getModelForClass(Fact);
 exports.model = FactModel;

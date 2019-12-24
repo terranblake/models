@@ -34,6 +34,7 @@ var Link = /** @class */ (function () {
     return Link;
 }());
 exports["class"] = Link;
+exports["default"] = Link;
 ;
 var LinkModel = typegoose_1.getModelForClass(Link);
 exports.model = LinkModel;

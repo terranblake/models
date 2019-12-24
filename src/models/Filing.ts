@@ -53,4 +53,4 @@ filingSchema.index({
 }, { unique: true });
 
 const filingModel = model('Filing', filingSchema);
-export { filingModel as model }
+export default filingModel;

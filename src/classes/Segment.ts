@@ -1,4 +1,4 @@
-export interface Segment {
+export default interface Segment {
 	dimension: Dimension;
 	value: Value;
 }

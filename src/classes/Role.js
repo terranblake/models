@@ -21,4 +21,4 @@ var Role = /** @class */ (function () {
     ], Role.prototype, "id");
     return Role;
 }());
-exports.Role = Role;
+exports["default"] = Role;

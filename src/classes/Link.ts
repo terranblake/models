@@ -4,7 +4,7 @@ import { class as Filing } from './Filing';
 import { class as Company } from './Company';
 import { LinkRole, Linkage } from './LinkMetadata';
 
-class Link {
+export default class Link {
     @prop({ ref: Filing, required: true })
     filing: Ref<Filing>;
 

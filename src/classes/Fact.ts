@@ -3,10 +3,10 @@ import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
 import { class as Filing } from './Filing';
 import { class as Company } from './Company';
 import { class as Link } from './Link';
-import { Segment } from './Segment';
-import { FactDate } from './FactDate';
+import { default as Segment } from './Segment';
+import { default as FactDate } from './FactDate';
 
-class Fact {
+export default class Fact {
     @prop({ ref: Filing, required: true })
     filing: Ref<Filing>;
 

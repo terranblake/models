@@ -1,8 +1,10 @@
 import { prop } from '@typegoose/typegoose';
 
-import { dateTypes } from '@pontilion/enums';
+import { enums } from '@postilion/utils';
 
-export class FactDate {
+const { dateTypes } = enums;
+
+export default class FactDate {
 	@prop({ enum: dateTypes, required: true })
 	type: string;
 

@@ -8,24 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 var typegoose_1 = require("@typegoose/typegoose");
 var Role_1 = require("./Role");
-var enums_1 = require("@pontilion/enums");
+var utils_1 = require("@postilion/utils");
+var itemTypes = utils_1.enums.itemTypes, identifierPrefixes = utils_1.enums.identifierPrefixes, filingDocumentTypes = utils_1.enums.filingDocumentTypes;
 var Identifier = /** @class */ (function () {
     function Identifier() {
     }
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.filingDocumentTypes, required: true })
+        typegoose_1.prop({ "enum": filingDocumentTypes, required: true })
     ], Identifier.prototype, "documentType");
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.itemTypes, required: true })
+        typegoose_1.prop({ "enum": itemTypes, required: true })
     ], Identifier.prototype, "itemType");
     __decorate([
-        typegoose_1.prop({ ref: Role_1.Role, required: true })
+        typegoose_1.prop({ ref: Role_1["default"], required: true })
     ], Identifier.prototype, "role");
     __decorate([
         typegoose_1.prop()
     ], Identifier.prototype, "extendedLinkRole");
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.identifierPrefixes, required: true })
+        typegoose_1.prop({ "enum": identifierPrefixes, required: true })
     ], Identifier.prototype, "prefix");
     __decorate([
         typegoose_1.prop()
@@ -63,5 +64,6 @@ var Identifier = /** @class */ (function () {
     return Identifier;
 }());
 exports["class"] = Identifier;
+exports["default"] = Identifier;
 var IdentifierModel = typegoose_1.getModelForClass(Identifier);
 exports.model = IdentifierModel;

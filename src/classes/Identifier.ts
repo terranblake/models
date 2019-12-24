@@ -1,14 +1,16 @@
 import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
 
-import { Role } from './Role';
+import { default as Role } from './Role';
 
-import {
+import { enums } from '@postilion/utils';
+
+const {
     itemTypes,
     identifierPrefixes,
     filingDocumentTypes,
-} from '@pontilion/enums';
+} = enums;
 
-class Identifier {
+export default class Identifier {
     @prop({ enum: filingDocumentTypes, required: true })
     documentType: string;
     @prop({ enum: itemTypes, required: true })

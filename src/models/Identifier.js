@@ -1,26 +1,22 @@
-import { Schema, model } from 'mongoose';
-import { enums } from '@postilion/utils';
-
-const {
-    itemTypes,
-    identifierPrefixes,
-    filingDocumentTypes,
-} = enums;
-
-const identifierSchema = new Schema({
+"use strict";
+exports.__esModule = true;
+var mongoose_1 = require("mongoose");
+var utils_1 = require("@postilion/utils");
+var itemTypes = utils_1.enums.itemTypes, identifierPrefixes = utils_1.enums.identifierPrefixes, filingDocumentTypes = utils_1.enums.filingDocumentTypes;
+var identifierSchema = new mongoose_1.Schema({
     documentType: {
         type: String,
-        enum: filingDocumentTypes,
-        required: true,
+        "enum": filingDocumentTypes,
+        required: true
     },
     itemType: {
         type: String,
-        enum: itemTypes,
+        "enum": itemTypes,
         required: false
     },
     extendedLinkRole: {
         type: String,
-        required: false,
+        required: false
     },
     // extracts the last 2 values from the extended link role
     // to provide context on where the identifier => fact can
@@ -28,7 +24,7 @@ const identifierSchema = new Schema({
     role: {
         type: {
             type: String,
-            enum: ['statement', 'disclosure'],
+            "enum": ['statement', 'disclosure'],
             required: false
         },
         // todo: get list of roles that we actually want
@@ -49,27 +45,27 @@ const identifierSchema = new Schema({
     // },
     prefix: {
         type: String,
-        enum: identifierPrefixes,
+        "enum": identifierPrefixes
     },
     name: {
         type: String,
-        required: true,
+        required: true
     },
     label: {
         type: String,
-        required: true,
+        required: true
     },
     depth: {
         type: Number,
-        required: false,
+        required: false
     },
     order: {
         type: Number,
-        required: false,
+        required: false
     },
     weight: {
         type: Number,
-        required: false,
+        required: false
     },
     parent: {
         type: String,
@@ -79,23 +75,19 @@ const identifierSchema = new Schema({
     documentation: String,
     createdAt: Date,
     updatedAt: Date,
-    version: String,
+    version: String
 });
-
 identifierSchema.index({
     name: 1
 });
-
 identifierSchema.index({
     parent: 1,
-    depth: 1,
+    depth: 1
 });
-
 identifierSchema.index({
     depth: 1,
     name: 1,
-    'description.id': 1,
+    'description.id': 1
 });
-
-const identifierModel = model('Identifier', identifierSchema);
-export default identifierModel;
+var identifierModel = mongoose_1.model('Identifier', identifierSchema);
+exports["default"] = identifierModel;

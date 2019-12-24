@@ -1,5 +1,5 @@
 ### Models
-#### These are the models used by @pontilion for all of it's business logic; extracted to a separate repo for modularity
+#### These are the models used by @postilion for all of it's business logic; extracted to a separate repo for modularity
 
 #### Company
     name: string				Long-form identifier e.g. Apple Inc., Ross Stores Inc.

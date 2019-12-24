@@ -76,4 +76,4 @@ const factSchema = new Schema({
 });
 
 const factModel = model('Fact', factSchema);
-export { factModel as model };
+export default factModel;

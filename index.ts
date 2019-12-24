@@ -1,1 +1,1 @@
-export { classes, models } from './src/index';
+export { /*classes,*/ models } from './src/index';

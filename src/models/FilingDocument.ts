@@ -47,4 +47,4 @@ filingDocumentSchema.index({
 });
 
 const filingDocumentModel = model('FilingDocument', filingDocumentSchema)
-export { filingDocumentModel as model }
+export default filingDocumentModel;

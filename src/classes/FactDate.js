@@ -7,19 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var typegoose_1 = require("@typegoose/typegoose");
-var enums_1 = require("@pontilion/enums");
+var utils_1 = require("@postilion/utils");
+var dateTypes = utils_1.enums.dateTypes;
 var FactDate = /** @class */ (function () {
     function FactDate() {
     }
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.dateTypes, required: true })
+        typegoose_1.prop({ "enum": dateTypes, required: true })
     ], FactDate.prototype, "type");
     __decorate([
         typegoose_1.prop({ "enum": [1, 2, 3, 4], required: false })
     ], FactDate.prototype, "quarter");
     return FactDate;
 }());
-exports.FactDate = FactDate;
+exports["default"] = FactDate;
 var DateRange = /** @class */ (function () {
     function DateRange() {
     }

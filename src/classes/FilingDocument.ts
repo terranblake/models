@@ -3,9 +3,11 @@ import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
 import { class as Company } from './Company';
 import { class as Filing } from './Filing';
 
-import { filingDocumentTypes, itemStates } from '@pontilion/enums';
+import { enums } from '@postilion/utils';
 
-class FilingDocument {
+const { filingDocumentTypes } = enums;
+
+export default class FilingDocument {
   @prop({ ref: Filing, required: true })
   filing: Ref<Filing>;
   @prop({ ref: Company, required: true })

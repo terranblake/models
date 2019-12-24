@@ -1,19 +1,20 @@
-import { Schema, model } from 'mongoose';
-
-const linkSchema = new Schema({
+"use strict";
+exports.__esModule = true;
+var mongoose_1 = require("mongoose");
+var linkSchema = new mongoose_1.Schema({
     filing: {
-        type: Schema.Types.ObjectId,
+        type: mongoose_1.Schema.Types.ObjectId,
         ref: 'Filing',
         required: true
     },
     company: {
-        type: Schema.Types.ObjectId,
+        type: mongoose_1.Schema.Types.ObjectId,
         ref: 'Company',
         required: true
     },
     name: {
         type: String,
-        required: true,
+        required: true
     },
     role: {
         name: String,
@@ -29,8 +30,7 @@ const linkSchema = new Schema({
     },
     order: Number,
     weight: Number,
-    type: String,
+    type: String
 });
-
-const linkModel = model('Link', linkSchema);
-export default linkModel;
+var linkModel = mongoose_1.model('Link', linkSchema);
+exports["default"] = linkModel;

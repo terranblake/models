@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 var typegoose_1 = require("@typegoose/typegoose");
 var Company_1 = require("./Company");
-var enums_1 = require("@pontilion/enums");
+var utils_1 = require("@postilion/utils");
+var filingTypes = utils_1.enums.filingTypes, itemStates = utils_1.enums.itemStates;
 var Filing = /** @class */ (function () {
     function Filing() {
     }
@@ -16,10 +17,10 @@ var Filing = /** @class */ (function () {
         typegoose_1.prop({ ref: Company_1["class"], required: true })
     ], Filing.prototype, "company");
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.filingTypes, required: true })
+        typegoose_1.prop({ "enum": filingTypes, required: true })
     ], Filing.prototype, "type");
     __decorate([
-        typegoose_1.prop({ "enum": enums_1.itemStates, required: true, "default": 'seeded' })
+        typegoose_1.prop({ "enum": itemStates, required: true, "default": 'seeded' })
     ], Filing.prototype, "status");
     __decorate([
         typegoose_1.prop()
@@ -63,5 +64,6 @@ var Filing = /** @class */ (function () {
     return Filing;
 }());
 exports["class"] = Filing;
+exports["default"] = Filing;
 var FilingModel = typegoose_1.getModelForClass(Filing);
 exports.model = FilingModel;

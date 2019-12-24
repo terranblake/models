@@ -1,6 +1,6 @@
 import { prop } from '@typegoose/typegoose';
 
-export class Role {
+export default class Role {
 	@prop({ enum: ['statement', 'disclosure'], required: true })
 	type: string;
 	@prop()

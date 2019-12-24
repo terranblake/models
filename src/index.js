@@ -1,3 +1,4 @@
+"use strict";
 // classes
 // import { default as CompanyClass } from './classes/Company';
 // import { default as FactClass } from './classes/Fact';
@@ -6,7 +7,7 @@
 // import { default as FilingDocumentClass } from './classes/FilingDocument';
 // import { default as IdentifierClass } from './classes/Identifier';
 // import { default as LinkClass } from './classes/Link';
-
+exports.__esModule = true;
 // const classes = {
 // 	Company: CompanyClass,
 // 	Fact: FactClass,
@@ -16,22 +17,19 @@
 // 	Identifier: IdentifierClass,
 // 	Link: LinkClass
 // }
-
 // models
-import { default as CompanyModel } from './models/Company';
-import { default as FactModel } from './models/Fact';
-import { default as FilingModel } from './models/Filing';
-import { default as FilingDocumentModel } from './models/FilingDocument';
-import { default as IdentifierModel } from './models/Identifier';
-import { default as LinkModel } from './models/Link';
-
-const models = {
-	Company: CompanyModel,
-	Fact: FactModel,
-	Filing: FilingModel,
-	FilingDocument: FilingDocumentModel,
-	Identifier: IdentifierModel,
-	Link: LinkModel
-}
-
-export { /*classes,*/ models }
+var Company_1 = require("./models/Company");
+var Fact_1 = require("./models/Fact");
+var Filing_1 = require("./models/Filing");
+var FilingDocument_1 = require("./models/FilingDocument");
+var Identifier_1 = require("./models/Identifier");
+var Link_1 = require("./models/Link");
+var models = {
+    Company: Company_1["default"],
+    Fact: Fact_1["default"],
+    Filing: Filing_1["default"],
+    FilingDocument: FilingDocument_1["default"],
+    Identifier: Identifier_1["default"],
+    Link: Link_1["default"]
+};
+exports.models = models;

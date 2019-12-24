@@ -1,9 +1,9 @@
-import { Schema, model } from 'mongoose';
-import { enums } from '@postilion/utils';
-
-const { exchanges, supportedRegulators } = enums;
-
-const companySchema = new Schema({
+"use strict";
+exports.__esModule = true;
+var mongoose_1 = require("mongoose");
+var utils_1 = require("@postilion/utils");
+var exchanges = utils_1.enums.exchanges, supportedRegulators = utils_1.enums.supportedRegulators;
+var companySchema = new mongoose_1.Schema({
     name: {
         type: String,
         required: true,
@@ -16,24 +16,24 @@ const companySchema = new Schema({
     },
     ref: {
         type: String,
-        enum: Object.keys(supportedRegulators),
-        required: true,
+        "enum": Object.keys(supportedRegulators),
+        required: true
     },
     refId: {
         type: String,
-        required: true,
+        required: true
     },
     refIndustryId: {
         type: String,
-        required: true,
+        required: true
     },
     fiscalYearEnd: {
         type: Date,
-        required: false,
+        required: false
     },
     exchange: {
         type: String,
-        enum: exchanges,
+        "enum": exchanges,
         required: false,
         lowercase: true
     },
@@ -41,14 +41,12 @@ const companySchema = new Schema({
     country: String,
     address: String,
     createdAt: Date,
-    updatedAt: Date,
+    updatedAt: Date
 });
-
 companySchema.index({
     ticker: 1,
     exchange: 1,
     sic: 1
 }, { unique: true });
-
-const companyModel = model('Company', companySchema);
-export default companyModel;
+var companyModel = mongoose_1.model('Company', companySchema);
+exports["default"] = companyModel;
