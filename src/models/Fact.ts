@@ -1,10 +1,7 @@
-const { model, Schema } = require('mongoose');
-const {
-    dateTypes,
-    dateSubTypes,
-    itemTypes, 
-    identifierPrefixes
-} = require('../utils/common-enums');
+import { Schema, model } from 'mongoose';
+import { enums } from '@postilion/utils';
+
+const { dateTypes } = enums;
 
 const factSchema = new Schema({
     filing: {
@@ -79,4 +76,4 @@ const factSchema = new Schema({
 });
 
 const factModel = model('Fact', factSchema);
-module.exports.model = factModel;
+export { factModel as model };

@@ -1,5 +1,4 @@
-const { model, Schema } = require('mongoose');
-const { identifierPrefixes } = require('../utils/common-enums');
+import { Schema, model } from 'mongoose';
 
 const linkSchema = new Schema({
     filing: {
@@ -34,4 +33,4 @@ const linkSchema = new Schema({
 });
 
 const linkModel = model('Link', linkSchema);
-module.exports.model = linkModel;
+export { linkModel as model }

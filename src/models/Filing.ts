@@ -1,6 +1,7 @@
-const { model, Schema } = require('mongoose');
-const { errors } = require('../utils/logging');
-const { filingTypes, itemStates } = require('../utils/common-enums');
+import { Schema, model } from 'mongoose';
+import { enums } from '@postilion/utils';
+
+const { filingTypes, itemStates } = enums;
 
 const filingSchema = new Schema({
   source: {
@@ -52,4 +53,4 @@ filingSchema.index({
 }, { unique: true });
 
 const filingModel = model('Filing', filingSchema);
-module.exports.model = filingModel;
+export { filingModel as model }

@@ -18,12 +18,20 @@ const classes = {
 }
 
 // models
+import { default as CompanyModel } from './models/Company';
+import { default as FactModel } from './models/Fact';
+import { default as FilingModel } from './models/Filing';
+import { default as FilingDocumentModel } from './models/FilingDocument';
+import { default as IdentifierModel } from './models/Identifier';
+import { default as LinkModel } from './models/Link';
+
 const models = {
-	// // skip these for now since our exported classes
-	// should be compiled into correct models
+	Company: CompanyModel,
+	Fact: FactModel,
+	Filing: FilingModel,
+	FilingDocument: FilingDocumentModel,
+	Identifier: IdentifierModel,
+	Link: LinkModel
 }
 
-export {
-	classes,
-	models
-}
+export { classes, models }

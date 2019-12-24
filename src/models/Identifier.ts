@@ -1,11 +1,11 @@
-const { model, Schema } = require('mongoose');
-const { errors } = require('../utils/logging');
+import { Schema, model } from 'mongoose';
+import { enums } from '@postilion/utils';
 
 const {
     itemTypes,
     identifierPrefixes,
     filingDocumentTypes,
-} = require('../utils/common-enums');
+} = enums;
 
 const identifierSchema = new Schema({
     documentType: {
@@ -98,47 +98,4 @@ identifierSchema.index({
 });
 
 const identifierModel = model('Identifier', identifierSchema);
-module.exports.model = identifierModel;
-
-module.exports.createAll = async (items, createTree) => {
-    if (createTree) {
-        return require('../utils/raw-data-helpers')
-            .createTaxonomyTree(
-                items,
-                this.create
-            );
-    } else {
-        items.map(async (item) => {
-            item = await identifierModel.create(item);
-        });
-
-        return items;
-    }
-}
-
-module.exports.findByDepth = async (depth) => {
-    return await identifierModel
-        .find({ depth })
-        .then((res) => {
-            return res;
-        })
-        .catch(errors);
-}
-
-module.exports.findParentIdentifier = async (depth, parent, roleId, version) => {
-    const query = {
-        depth: depth - 1,
-        name: parent,
-        'role.id': roleId,
-        version
-    };
-
-    return await identifierModel
-        .findOne(query, { _id: 1 })
-        .then((identifier) => {
-            if (identifier) {
-                return identifier;
-            }
-        })
-        .catch(errors);
-}
+export { identifierModel as model }

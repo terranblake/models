@@ -1,6 +1,7 @@
-const { model, Schema } = require('mongoose');
-const { exchanges } = require('../utils/common-enums');
-const { supportedRegulators } = require('../utils/common-enums');
+import { Schema, model } from 'mongoose';
+import { enums } from '@postilion/utils';
+
+const { exchanges, supportedRegulators } = enums;
 
 const companySchema = new Schema({
     name: {
@@ -50,13 +51,4 @@ companySchema.index({
 }, { unique: true });
 
 const companyModel = model('Company', companySchema);
-module.exports.model = companyModel;
-
-module.exports.findByCik = async (cik) => {
-    return await companyModel
-        .findOne({ cik: { $regex: new RegExp(cik) } })
-        .then((company) => {
-            return company;
-        })
-        .catch(console.error);
-}
+export { companyModel as model };

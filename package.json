@@ -10,10 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@postilion/utils": "^1.0.0",
+    "@postilion/utils": "^1.0.3",
     "@typegoose/typegoose": "^6.1.8"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.5.35",
     "typescript": "^3.7.4"
   }
 }
