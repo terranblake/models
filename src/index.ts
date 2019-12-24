@@ -25,7 +25,7 @@ import { default as FilingDocumentModel } from './models/FilingDocument';
 import { default as IdentifierModel } from './models/Identifier';
 import { default as LinkModel } from './models/Link';
 
-const models = {
+export const models = {
 	Company: CompanyModel,
 	Fact: FactModel,
 	Filing: FilingModel,
@@ -35,4 +35,3 @@ const models = {
 }
 
 // todo: add support for typegoose?
-export default models;
