@@ -1,1 +1,1 @@
-export { /*classes,*/ models } from './src/index';
+export { default as models } from './src/index';

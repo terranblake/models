@@ -34,4 +34,5 @@ const models = {
 	Link: LinkModel
 }
 
-export { /*classes,*/ models }
+// todo: add support for typegoose?
+export default models;
