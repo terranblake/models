@@ -19,17 +19,15 @@ exports.__esModule = true;
 // }
 // models
 var Company_1 = require("./src/models/Company");
+exports.Company = Company_1["default"];
 var Fact_1 = require("./src/models/Fact");
+exports.Fact = Fact_1["default"];
 var Filing_1 = require("./src/models/Filing");
+exports.Filing = Filing_1["default"];
 var FilingDocument_1 = require("./src/models/FilingDocument");
+exports.FilingDocument = FilingDocument_1["default"];
 var Identifier_1 = require("./src/models/Identifier");
+exports.Identifier = Identifier_1["default"];
 var Link_1 = require("./src/models/Link");
-exports.models = {
-    Company: Company_1["default"],
-    Fact: Fact_1["default"],
-    Filing: Filing_1["default"],
-    FilingDocument: FilingDocument_1["default"],
-    Identifier: Identifier_1["default"],
-    Link: Link_1["default"]
-};
+exports.Link = Link_1["default"];
 // todo: add support for typegoose?

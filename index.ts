@@ -18,18 +18,11 @@
 // }
 
 // models
-import { default as CompanyModel } from './src/models/Company';
-import { default as FactModel } from './src/models/Fact';
-import { default as FilingModel } from './src/models/Filing';
-import { default as FilingDocumentModel } from './src/models/FilingDocument';
-import { default as IdentifierModel } from './src/models/Identifier';
-import { default as LinkModel } from './src/models/Link';
-
-export { CompanyModel as Company }
-export { FactModel as Fact }
-export { FilingModel as Filing }
-export { FilingDocumentModel as FilingDocument }
-export { IdentifierModel as Identifier }
-export { LinkModel as Link }
+export { default as Company } from './src/models/Company';
+export { default as Fact } from './src/models/Fact';
+export { default as Filing } from './src/models/Filing';
+export { default as FilingDocument } from './src/models/FilingDocument';
+export { default as Identifier } from './src/models/Identifier';
+export { default as Link } from './src/models/Link';
 
 // todo: add support for typegoose?
