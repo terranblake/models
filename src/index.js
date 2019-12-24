@@ -32,4 +32,5 @@ var models = {
     Identifier: Identifier_1["default"],
     Link: Link_1["default"]
 };
-exports.models = models;
+// todo: add support for typegoose?
+exports["default"] = models;
