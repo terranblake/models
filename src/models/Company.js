@@ -41,7 +41,15 @@ var companySchema = new mongoose_1.Schema({
     country: String,
     address: String,
     createdAt: Date,
-    updatedAt: Date
+    updatedAt: Date,
+    stats: {
+        lastSyncedFilingsAt: {
+            type: Date,
+            // default long in the past to make sure
+            // that any syncing starts immediately
+            "default": new Date(1990, 1, 1)
+        }
+    }
 });
 companySchema.index({
     ticker: 1,
