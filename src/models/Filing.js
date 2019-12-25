@@ -34,7 +34,7 @@ var filingSchema = new mongoose_1.Schema({
         type: String,
         "enum": itemStates,
         required: true,
-        "default": 'seeded'
+        "default": 'unseeded'
     },
     url: String,
     name: String,

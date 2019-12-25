@@ -22,7 +22,8 @@ var filingDocumentSchema = new mongoose_1.Schema({
     status: {
         type: String,
         "enum": itemStates,
-        required: true
+        required: true,
+        "default": 'unseeded'
     },
     // helper field for qualifying a status. e.g. if downloaded, 
     // there should be a local path or bucket id in this field
