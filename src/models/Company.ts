@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { enums } from '@postilion/utils';
 
-const { exchanges, supportedRegulators } = enums;
+const { exchanges, rssFeeds } = enums;
 
 const companySchema = new Schema({
     name: {
@@ -16,7 +16,7 @@ const companySchema = new Schema({
     },
     ref: {
         type: String,
-        enum: Object.keys(supportedRegulators),
+        enum: Object.keys(rssFeeds),
         required: true,
     },
     refId: {

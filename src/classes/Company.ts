@@ -1,7 +1,7 @@
 import { prop, getModelForClass } from '@typegoose/typegoose';
 import { enums } from '@postilion/utils';
 
-const { exchanges, supportedRegulators } = enums;
+const { exchanges, rssFeeds } = enums;
 
 export default class CompanyClass {
     @prop({ required: true })
@@ -9,7 +9,7 @@ export default class CompanyClass {
     @prop({ required: true })
     public ticker: string;
 
-    @prop({ required: true, enum: Object.keys(supportedRegulators) })
+    @prop({ required: true, enum: Object.keys(rssFeeds) })
     public ref: string;
     @prop({ required: true })
     public refId: string;
