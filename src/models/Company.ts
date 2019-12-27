@@ -48,6 +48,12 @@ const companySchema = new Schema({
             // default long in the past to make sure
             // that any syncing starts immediately
             default: new Date(1990, 1, 1)
+        },
+        lastSyncedEarningsAt: {
+            type: Date,
+            // default long in the past to make sure
+            // that any syncing starts immediately
+            default: new Date(1990, 1, 1)
         }
     }
 });
