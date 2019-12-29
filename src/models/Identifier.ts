@@ -13,6 +13,11 @@ const identifierSchema = new Schema({
         enum: filingDocumentTypes,
         required: true,
     },
+    taxonomy: {
+        type: Schema.Types.ObjectId,
+        ref: 'Taxonomy',
+        required: true
+    },
     itemType: {
         type: String,
         enum: itemTypes,

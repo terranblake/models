@@ -9,6 +9,11 @@ var identifierSchema = new mongoose_1.Schema({
         "enum": filingDocumentTypes,
         required: true
     },
+    taxonomy: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: 'Taxonomy',
+        required: true
+    },
     itemType: {
         type: String,
         "enum": itemTypes,
