@@ -20,6 +20,8 @@ exports.__esModule = true;
 // models
 var Company_1 = require("./src/models/Company");
 exports.Company = Company_1["default"];
+var Taxonomy_1 = require("./src/models/Taxonomy");
+exports.Taxonomy = Taxonomy_1["default"];
 var Fact_1 = require("./src/models/Fact");
 exports.Fact = Fact_1["default"];
 var Filing_1 = require("./src/models/Filing");

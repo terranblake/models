@@ -1,0 +1,37 @@
+import { Schema, model } from 'mongoose';
+
+import { enums } from '@postilion/utils';
+
+const taxonomySchema = new Schema({
+    // plain text name for taxonomy e.g. us gaap 2017
+    name: String,
+    source: {
+        type: enums.supported.regulators,
+        required: true,
+    },
+    // which link format does this taxonomy follow
+    type: {
+        type: String,
+        enum: enums.supported.taxonomyLinkTypes,
+        required: true,
+    },
+    // what is the primary prefix for this tree?
+    prefix: String,
+    // when was this taxonomy released/accepted?
+    releaseDate: Date,
+    // where does this taxonomy apply?
+    country: enums.supported.countries,
+    formats: [{
+        // where can this format be found at? url or s3 info
+        location: String,
+        // which type of file should be expected when downloading from this url?
+        type: {
+            type: String,
+            enum: enums.supported.taxonomyFileFormats,
+            required: true
+        },
+    }]
+});
+
+const taxonomyModel = model('Taxonomy', taxonomySchema);
+export default taxonomyModel;
