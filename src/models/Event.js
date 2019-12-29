@@ -47,6 +47,10 @@ var eventSchema = new mongoose_1.Schema({
     // time that it was created and therefore should
     // be consumed as something that has already occurred,
     // versus being scheduled for sometime in the future
+    date: Date,
+    // this field is for notifying the scheduler service
+    // that the event has already been scheduled and does
+    // not need to be queued again
     scheduledAt: Date,
     // should this event be processed if the scheduledAt
     // datetime has already passed?
