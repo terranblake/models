@@ -6,7 +6,8 @@ var taxonomySchema = new mongoose_1.Schema({
     // plain text name for taxonomy e.g. us gaap 2017
     name: String,
     source: {
-        type: utils_1.enums.supported.regulators,
+        type: String,
+        "enum": utils_1.enums.supported.regulators,
         required: true
     },
     // which link format does this taxonomy follow
@@ -20,7 +21,10 @@ var taxonomySchema = new mongoose_1.Schema({
     // when was this taxonomy released/accepted?
     releaseDate: Date,
     // where does this taxonomy apply?
-    country: utils_1.enums.supported.countries,
+    country: {
+        type: String,
+        "enum": utils_1.enums.supported.countries
+    },
     formats: [{
             // where can this format be found at? url or s3 info
             location: String,
