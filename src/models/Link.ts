@@ -30,6 +30,14 @@ const linkSchema = new Schema({
     order: Number,
     weight: Number,
     type: String,
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 const linkModel = model('Link', linkSchema);

@@ -82,9 +82,15 @@ const identifierSchema = new Schema({
     },
     abstract: Boolean,
     documentation: String,
-    createdAt: Date,
-    updatedAt: Date,
     version: String,
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 identifierSchema.index({

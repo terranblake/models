@@ -36,7 +36,15 @@ var taxonomySchema = new mongoose_1.Schema({
                 "enum": utils_1.enums.supported.taxonomyFileFormats,
                 required: true
             }
-        }]
+        }],
+    createdAt: {
+        type: Date,
+        "default": Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        "default": Date.now()
+    }
 });
 taxonomySchema.index({
     source: 1,

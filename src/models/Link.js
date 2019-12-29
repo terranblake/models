@@ -30,7 +30,15 @@ var linkSchema = new mongoose_1.Schema({
     },
     order: Number,
     weight: Number,
-    type: String
+    type: String,
+    createdAt: {
+        type: Date,
+        "default": Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        "default": Date.now()
+    }
 });
 var linkModel = mongoose_1.model('Link', linkSchema);
 exports["default"] = linkModel;

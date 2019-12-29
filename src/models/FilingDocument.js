@@ -37,8 +37,14 @@ var filingDocumentSchema = new mongoose_1.Schema({
     fileSize: String,
     fileDescription: String,
     fileUrl: String,
-    createdAt: Date,
-    updatedAt: Date
+    createdAt: {
+        type: Date,
+        "default": Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        "default": Date.now()
+    }
 });
 filingDocumentSchema.index({
     filing: 1,

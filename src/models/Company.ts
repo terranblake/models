@@ -40,8 +40,6 @@ const companySchema = new Schema({
     state: String,
     country: String,
     address: String,
-    createdAt: Date,
-    updatedAt: Date,
     stats: {
         lastSyncedFilingsAt: {
             type: Date,
@@ -55,7 +53,15 @@ const companySchema = new Schema({
             // that any syncing starts immediately
             default: new Date(1990, 1, 1)
         }
-    }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 companySchema.index({

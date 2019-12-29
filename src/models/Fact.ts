@@ -71,8 +71,14 @@ const factSchema = new Schema({
     balance: String,
     sign: Boolean,
     value: String,
-    createdAt: Date,
-    updatedAt: Date,
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 const factModel = model('Fact', factSchema);

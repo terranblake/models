@@ -43,8 +43,14 @@ var filingSchema = new mongoose_1.Schema({
     acceptedAt: Date,
     accessionNumber: String,
     fileNumber: String,
-    createdAt: Date,
-    updatedAt: Date
+    createdAt: {
+        type: Date,
+        "default": Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        "default": Date.now()
+    }
 });
 filingSchema.index({
     company: 1,

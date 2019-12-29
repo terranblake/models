@@ -36,7 +36,15 @@ const taxonomySchema = new Schema({
             enum: enums.supported.taxonomyFileFormats,
             required: true
         },
-    }]
+    }],
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now()
+    },
 });
 
 taxonomySchema.index(
