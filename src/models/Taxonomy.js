@@ -18,6 +18,8 @@ var taxonomySchema = new mongoose_1.Schema({
     },
     // what is the primary prefix for this tree?
     prefix: String,
+    // year that this taxonomy is for
+    year: Number,
     // when was this taxonomy released/accepted?
     releaseDate: Date,
     // where does this taxonomy apply?
