@@ -18,6 +18,8 @@ exports.__esModule = true;
 // 	Link: LinkClass
 // }
 // models
+var Event_1 = require("./src/models/Event");
+exports.Event = Event_1["default"];
 var Company_1 = require("./src/models/Company");
 exports.Company = Company_1["default"];
 var Taxonomy_1 = require("./src/models/Taxonomy");

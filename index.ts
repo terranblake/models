@@ -18,6 +18,7 @@
 // }
 
 // models
+export { default as Event } from './src/models/Event';
 export { default as Company } from './src/models/Company';
 export { default as Taxonomy } from './src/models/Taxonomy';
 export { default as Fact } from './src/models/Fact';
