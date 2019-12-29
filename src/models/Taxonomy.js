@@ -38,5 +38,12 @@ var taxonomySchema = new mongoose_1.Schema({
             }
         }]
 });
+taxonomySchema.index({
+    source: 1,
+    year: 1,
+    releaseDate: 1
+}, {
+    unique: true
+});
 var taxonomyModel = mongoose_1.model('Taxonomy', taxonomySchema);
 exports["default"] = taxonomyModel;

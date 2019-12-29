@@ -39,5 +39,16 @@ const taxonomySchema = new Schema({
     }]
 });
 
+taxonomySchema.index(
+    {
+        source: 1,
+        year: 1,
+        releaseDate: 1
+    },
+    {
+        unique: true
+    }
+);
+
 const taxonomyModel = model('Taxonomy', taxonomySchema);
 export default taxonomyModel;

@@ -49,6 +49,8 @@ var filingSchema = new mongoose_1.Schema({
 filingSchema.index({
     company: 1,
     refId: 1
-}, { unique: true });
+}, {
+    unique: true
+});
 var filingModel = mongoose_1.model('Filing', filingSchema);
 exports["default"] = filingModel;

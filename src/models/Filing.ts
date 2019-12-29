@@ -47,10 +47,15 @@ const filingSchema = new Schema({
   updatedAt: Date,
 });
 
-filingSchema.index({
-  company: 1,
-  refId: 1
-}, { unique: true });
+filingSchema.index(
+  {
+    company: 1,
+    refId: 1
+  },
+  {
+    unique: true
+  }
+);
 
 const filingModel = model('Filing', filingSchema);
 export default filingModel;
