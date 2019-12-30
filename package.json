@@ -10,6 +10,17 @@
     "build": "tsc index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc ./index.ts"
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +30,7 @@
   },
   "devDependencies": {
     "@types/mongoose": "^5.5.35",
+    "husky": "^3.1.0",
     "typescript": "^3.7.4"
   }
 }
