@@ -61,6 +61,14 @@ var factSchema = new mongoose_1.Schema({
             required: true
         }
     },
+    unit: {
+        type: String,
+        required: true
+    },
+    calculation: [{
+            prefix: String,
+            name: String
+        }],
     itemType: {
         type: String,
         // enum: itemTypes,
