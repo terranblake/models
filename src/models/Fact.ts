@@ -63,6 +63,14 @@ const factSchema = new Schema({
             required: true,
         },
     },
+    unit: {
+        type: String,
+        required: true,
+    },
+    calculation: [{
+        prefix: String,
+        name: String
+    }],
     itemType: {
         type: String,
         // enum: itemTypes,
