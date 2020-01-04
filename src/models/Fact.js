@@ -23,15 +23,13 @@ var factSchema = new mongoose_1.Schema({
         required: true
     },
     context: {
-        type: String,
-        required: true
+        type: String
     },
     // defines if the fact was created as the result of a link
     // being used (calculation arcs)
     link: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: 'Link',
-        required: false
+        ref: 'Link'
     },
     // used for facts which have a segment element defined in the
     // context that the fact references
@@ -54,8 +52,7 @@ var factSchema = new mongoose_1.Schema({
     date: {
         type: {
             type: String,
-            "enum": dateTypes,
-            required: true
+            "enum": dateTypes
         },
         quarter: {
             type: Number,
@@ -65,13 +62,11 @@ var factSchema = new mongoose_1.Schema({
             type: String
         },
         value: {
-            type: mongoose_1.Schema.Types.Mixed,
-            required: true
+            type: mongoose_1.Schema.Types.Mixed
         }
     },
     unit: {
-        type: String,
-        required: true
+        type: String
     },
     calculation: [{
             prefix: String,

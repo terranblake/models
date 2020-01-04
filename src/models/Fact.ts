@@ -24,14 +24,12 @@ const factSchema = new Schema({
     },
     context: {
         type: String,
-        required: true
     },
     // defines if the fact was created as the result of a link
     // being used (calculation arcs)
     link: {
         type: Schema.Types.ObjectId,
         ref: 'Link',
-        required: false
     },
     // used for facts which have a segment element defined in the
     // context that the fact references
@@ -57,7 +55,6 @@ const factSchema = new Schema({
         type: {
             type: String,
             enum: dateTypes,
-            required: true,
         },
         quarter: {
             type: Number,
@@ -68,12 +65,10 @@ const factSchema = new Schema({
         },
         value: {
             type: Schema.Types.Mixed,
-            required: true,
         },
     },
     unit: {
         type: String,
-        required: true,
     },
     calculation: [{
         prefix: String,
