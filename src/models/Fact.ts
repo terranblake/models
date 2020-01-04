@@ -16,7 +16,11 @@ const factSchema = new Schema({
     },
     name: {
         type: String,
-        required: true,
+        required: true
+    },
+    prefix: {
+        type: String,
+        required: true
     },
     // defines if the fact was created as the result of a link
     // being used (calculation arcs)
