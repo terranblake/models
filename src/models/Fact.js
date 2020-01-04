@@ -78,9 +78,7 @@ var factSchema = new mongoose_1.Schema({
             name: String
         }],
     itemType: {
-        type: String,
-        // enum: itemTypes,
-        required: true
+        type: String
     },
     balance: String,
     sign: Boolean,

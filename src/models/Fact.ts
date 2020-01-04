@@ -82,7 +82,6 @@ const factSchema = new Schema({
     itemType: {
         type: String,
         // enum: itemTypes,
-        required: true,
     },
     balance: String,
     sign: Boolean,
