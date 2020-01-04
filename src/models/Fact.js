@@ -18,6 +18,14 @@ var factSchema = new mongoose_1.Schema({
         type: String,
         required: true
     },
+    prefix: {
+        type: String,
+        required: true
+    },
+    context: {
+        type: String,
+        required: true
+    },
     // defines if the fact was created as the result of a link
     // being used (calculation arcs)
     link: {
