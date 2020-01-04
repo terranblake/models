@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var mongoose_1 = require("mongoose");
+var utils_1 = require("@postilion/utils");
 var linkSchema = new mongoose_1.Schema({
     filing: {
         type: mongoose_1.Schema.Types.ObjectId,
@@ -30,6 +31,10 @@ var linkSchema = new mongoose_1.Schema({
     },
     order: Number,
     weight: Number,
+    documentType: {
+        type: String,
+        "enum": utils_1.enums.filingDocumentTypes
+    },
     type: String,
     createdAt: {
         type: Date,

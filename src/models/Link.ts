@@ -1,5 +1,7 @@
 import { Schema, model } from 'mongoose';
 
+import { enums } from '@postilion/utils';
+
 const linkSchema = new Schema({
     filing: {
         type: Schema.Types.ObjectId,
@@ -29,6 +31,10 @@ const linkSchema = new Schema({
     },
     order: Number,
     weight: Number,
+    documentType: {
+        type: String,
+        enum: enums.filingDocumentTypes,
+    },
     type: String,
     createdAt: {
         type: Date,
