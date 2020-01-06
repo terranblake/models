@@ -58,6 +58,9 @@ var factSchema = new mongoose_1.Schema({
             type: Number,
             "enum": [1, 2, 3, 4]
         },
+        fiscalYear: {
+            type: Number
+        },
         year: {
             type: Number
         },

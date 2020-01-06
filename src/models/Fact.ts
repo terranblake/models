@@ -60,6 +60,9 @@ const factSchema = new Schema({
             type: Number,
             enum: [1, 2, 3, 4],
         },
+        fiscalYear: {
+            type: Number,
+        },
         year: {
             type: Number,
         },
