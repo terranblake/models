@@ -59,7 +59,7 @@ var factSchema = new mongoose_1.Schema({
             "enum": [1, 2, 3, 4]
         },
         year: {
-            type: String
+            type: Number
         },
         value: {
             type: mongoose_1.Schema.Types.Mixed

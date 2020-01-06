@@ -61,7 +61,7 @@ const factSchema = new Schema({
             enum: [1, 2, 3, 4],
         },
         year: {
-            type: String,
+            type: Number,
         },
         value: {
             type: Schema.Types.Mixed,
