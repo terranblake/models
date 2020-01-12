@@ -52,10 +52,7 @@ const identifierSchema = new Schema({
     //     },
     //     context: String,
     // },
-    prefix: {
-        type: String,
-        enum: identifierPrefixes,
-    },
+    prefix: String,
     name: {
         type: String,
         required: true,
