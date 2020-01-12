@@ -48,10 +48,7 @@ var identifierSchema = new mongoose_1.Schema({
     //     },
     //     context: String,
     // },
-    prefix: {
-        type: String,
-        "enum": identifierPrefixes
-    },
+    prefix: String,
     name: {
         type: String,
         required: true
