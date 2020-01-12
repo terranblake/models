@@ -29,7 +29,6 @@ var identifierSchema = new mongoose_1.Schema({
     role: {
         type: {
             type: String,
-            "enum": ['statement', 'disclosure'],
             required: false
         },
         // todo: get list of roles that we actually want
